@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dictionary</title>
+    <script src="https://kit.fontawesome.com/06f2b8b551.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dictionary.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>LingoLookup</h1>
+    <p>Explore word Definition, Semantics Meaning, Origins and Pronunciation in seconds!</p>
+    <div class="inputBox">
+        <input type="text" placeholder="Search for a word..." id="userSearch" autofocus />
+        <button onclick="searchWord()" id="search">Search</button>
+    </div>
+</div>
+
+<div>
+    <div class="resultHeader">
+        <div>
+            <h1 id="wordSearch">Loading...</h1>
+        </div>
+        <div id="audioContainer">
+            <i id="playWord" class="fa-solid fa-volume-low"></i>
+            <p id="phoneticText">Sound</p>
+        </div>
+    </div>
+
+    <div class="tableSection">
+        <table>
+            <thead>
+                <tr>
+                    <th>Part of Speech</th>
+                    <th>Meaning</th>
+                    <th>Semantics</th>
+                </tr>
+            </thead>
+            <tbody id="partSpeech">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script src="./dictionary.js"></script>
+</body>
+</html>
