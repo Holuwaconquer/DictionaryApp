@@ -27,7 +27,7 @@ let audioUrl;
                         <tr>
                             <td>${meaning.partOfSpeech}</td>
                             <td>${def.definition.length > 100 ? def.definition.slice(0, 100) + '...' : def.definition}</td>
-                            <td>${meaning.synonyms?.join(', ') || '—'}</td>
+                            <td>Synonyms: ${meaning.synonyms?.join(', ') || '—'} <br> Antonyms: ${meaning.antonyms?.join(', ') || '—'}</td>
                         </tr>`;
                 });
             });
@@ -73,12 +73,13 @@ let audioUrl;
     });
 
     playWord.addEventListener('click', () => {
+        playWord.innerHTML = '';
         if (audioUrl) {
             const audio = new Audio(audioUrl);
             playWord.innerHTML = `<i class="fa-solid fa-ear-listen"></i>`;
             audio.play();
             audio.addEventListener('ended', () => {
-                playWord.innerHTML = `<i class="fa-solid fa-volume-low"></i>`;
+                playWord.innerHTML = '';
             });
         }
     });

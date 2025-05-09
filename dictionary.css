@@ -106,8 +106,11 @@ table td, table th {
         text-align: center;
     }
     .resultHeader {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+    }
+    .resultHeader div:first-child h1 {
+        font-size: 2em;
     }
     .resultHeader div:last-child {
         margin-top: 10px;
