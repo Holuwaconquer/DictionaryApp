@@ -120,3 +120,22 @@ table td, table th {
         padding: 10px;
     }
 }
+
+.installbtnDIV{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#installBtn{
+    border: none;
+    outline: none;
+    background: linear-gradient(50deg, #2563eb, #fff);
+    padding: 12px 40px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
