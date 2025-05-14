@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>LingoLookup</title>
+    <title>LingoLookup | Free Dictionary App – Definitions, Meanings & Pronunciations</title>
+    <meta name="description" content="LingoLookup is a free online dictionary app that helps you find word definitions, meanings, origins, and pronunciations instantly. PWA supported.">
+    <meta name="keywords" content="dictionary app, online dictionary, word meanings, word definitions, PWA dictionary, vocabulary builder, pronunciation app">
+    <meta name="keywords" content="best dictionary app in the world">
+    <meta name="author" content="LingoLookup">
+    <link rel="canonical" href="https://lingodictionary.netlify.app/">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+
     <link rel="icon" href="./icon.png" type="image/png">
     <script src="https://kit.fontawesome.com/06f2b8b551.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./dictionary.css">
@@ -13,9 +23,24 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
     </style>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "LingoLookup",
+        "operatingSystem": "Web",
+        "applicationCategory": "EducationApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "description": "Free online dictionary app to search word definitions, origins, and pronunciation. Works offline as a PWA.",
+        "url": "https://lingodictionary.netlify.app"
+        }
+    </script>
 </head>
 <body>
-
     <div class="installbtnDIV">
         <button id="installBtn">Install App</button>
     </div>
@@ -56,5 +81,7 @@
 
 
 <script src="./dictionary.js"></script>
+
+
 </body>
 </html>
