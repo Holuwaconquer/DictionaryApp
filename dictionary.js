@@ -75,12 +75,15 @@ let audioUrl;
     playWord.addEventListener('click', () => {
         playWord.innerHTML = '';
         if (audioUrl) {
+            // const icon = document.createElement('i');
+            // icon.className = 'fa-solid fa-ear-listen';
+            // playWord.appendChild(icon);
             const audio = new Audio(audioUrl);
-            playWord.innerHTML = `<i class="fa-solid fa-ear-listen"></i>`;
+
             audio.play();
-            audio.addEventListener('ended', () => {
-                playWord.innerHTML = '';
-            });
+            // audio.addEventListener('ended', () => {
+            //     playWord.innerHTML = '';
+            // });
         }
     });
 
