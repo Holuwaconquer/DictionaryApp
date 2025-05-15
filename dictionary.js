@@ -57,6 +57,7 @@ let audioUrl;
     });
 
     window.addEventListener('load', () => {
+        askNotificationPermission()
         fetch('https://random-word-api.herokuapp.com/word?number=1')
             .then(res => res.json())
             .then(([wordObj]) => {
@@ -119,3 +120,22 @@ window.addEventListener('beforeinstallprompt', (e) => {
         });
     });
 });
+
+function askNotificationPermission(){
+    if(Notification.permission === 'default'){
+        Notification.requestPermission().then(permission =>{
+            console.log("Notification Permission:", permission);
+            
+        })
+    }
+}
+// const notifyMe =() =>{
+//     if(Notification.permission==='granted'){
+//         new Notification('thanks for clicking!',{
+//             body: 'You just clicked the button.',
+//             icon: 'https://example.com/icon.png'
+//         })
+//     }else{
+//         alert('please alert notification to receive alerts')
+//     }
+// }
