@@ -125,7 +125,6 @@ function askNotificationPermission(){
     if(Notification.permission === 'default'){
         Notification.requestPermission().then(permission =>{
             console.log("Notification Permission:", permission);
-            
         })
     }
 }
